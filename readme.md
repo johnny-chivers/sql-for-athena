@@ -90,19 +90,19 @@ SELECT Firstname FROM customers WHERE firstname = 'John' ;
 ```
 7. Use an AND/OR clause to filter data 
 ```
-SELECT Firstname FROM customers WHERE firstname = 'John'  AND lastname = 'Arthur';
+SELECT * FROM customers WHERE firstname = 'John'  AND lastname = 'Arthur';
 
-SELECT Firstname FROM customers WHERE firstname = 'John' or lastname = 'Arthur';
+SELECT * FROM customers WHERE firstname = 'John' or lastname = 'Arthur';
 ```
 8. Use an in clause to filter data 
 ```
-SELECT Firstname FROM customers WHERE Customerid in (int) 
+SELECT * FROM customers WHERE Customerid in (371) 
 
-SELECT Firstname FROM customers WHERE Customerid in (int, int);
+SELECT * FROM customers WHERE Customerid in (371, 377);
 ```
 9.  Wild Cards
 ```
-SELECT * FROM customers WHERE Fullname like '%k'; 
+SELECT * FROM customers WHERE Fullname like 'J%'; 
 ```
 10. Union 
 ```
