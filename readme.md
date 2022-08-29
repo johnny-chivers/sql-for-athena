@@ -58,12 +58,15 @@ CREATE DATABASE demo_data;
 1. Create Customer Table
 ```
 CREATE EXTERNAL TABLE IF NOT EXISTS customers(
-  customerid INT, 
+  customerid BIGINT, 
   fistname STRING,
   lastname STRING,
   fullname STRING
   )
-LOCATION 's3://table-data-location/'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION 's3://table-data-location/'; 
 ```
 2. Select all rows from cusomters table 
 ```
