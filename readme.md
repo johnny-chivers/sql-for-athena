@@ -86,7 +86,7 @@ SELECT CONCAT(firstname,lastname) AS full_name FROM customer;
 ```
 6. Use a WHERE clause to filter data 
 ```
-SELECT Firstname FROM customers WHERE Customerid = int ;
+SELECT Firstname FROM customers WHERE firstname = 'John' ;
 ```
 7. Use an AND/OR clause to filter data 
 ```
