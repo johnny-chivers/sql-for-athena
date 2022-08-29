@@ -1,4 +1,4 @@
-# PySpark For AWS Glue 
+# SQL For AWS Athena 
 
 ## Table of contents
 
