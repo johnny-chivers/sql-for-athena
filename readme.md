@@ -1,4 +1,4 @@
-# SQL For AWS Athena 
+# SQL For AWS Athena
 
 ## Table of contents
 
@@ -48,15 +48,13 @@ Below are the schemas for the tables created in the Glue Data Catalog by the clo
 2. Create S3 folder `results`
 3. Upload `Data` folder from GitHuib repo
 4. Set up Athena workgroup
-
-## Main Tutorial 
-1. Console overview
-
-2. Create Database
+5. Console overview
+6. Create Database
 ```
 CREATE DATABASE demo_data; 
 ```
 
+## Main Tutorial 
 1. Create Customer Table
 ```
 CREATE EXTERNAL TABLE IF NOT EXISTS customers(
