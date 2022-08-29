@@ -146,9 +146,55 @@ FROM customers;
 ```
 18. INNER JOIN
 ```
+CREATE EXTERNAL TABLE IF NOT EXISTS employees(
+employeeid  bigint,
+managerid bigint,
+firstname string,
+lastname string , 
+fullname  string,
+jobtitle string,    
+organizationlevel int   , 
+maritalstatus string, 
+gender string,
+territory string,
+country string,
+group string 
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION 's3://table-data-location/'; 
+```
+```
+CREATE EXTERNAL TABLE IF NOT EXISTS orders(
+salesorderid bigint,
+salesorderdetailid int,
+orderdate string,
+duedate string,
+shipdate string,
+employeeid bigint,
+customerid bigint,
+subtotal decimal(17,4),
+taxamt decimal(17,4),
+freight decimal(17,4),
+totaldue decimal(17,4),
+productid  int,
+orderqty int,
+unitprice decimal(17,4),
+unitpricediscount decimal(17,4),
+linetotal decimal(17,4)
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION 's3://table-data-location/'; 
+```
+```
+SELECT * FROM customers INNER JOIN orders on customers.customerid = orders.customerid; 
 ```
 19. LEFT JOIN 
 ```
+SELECT * FROM order LEFT JOIN customers on customers.customerid = orders.customerid; 
 ```
 
 ## Creators
