@@ -106,49 +106,50 @@ SELECT * FROM customers WHERE Fullname like 'J%';
 ```
 10. Union 
 ```
-SELECT Firstname FROM customers WHERE Customerid in (int) 
+SELECT Firstname FROM customers WHERE Customerid in (371) 
 UNION
-SELECT Firstname FROM customers WHERE Customerid in (int, int);
+SELECT Firstname FROM customers WHERE Customerid in (371, 377);
 ```
-11. DELETE  A ROW
+11. INSERT A ROW
 ```
-DELETE FROM FROM customers WHERE Customerid in (int) 
+INSERT INTO customers (customerid, firstname, lastname, fullname) values (1221,'John', 'Doe', 'John Doe'); 
 ```
-12. INSERT A ROW
+12. DISTINCT 
+```
+SELECT DISTINCT firstname FROM customers WHERE firstname like 'J%';
+```
+13. COUNT 
+```
+SELECT count(firstname) FROM customers WHERE firstname like 'J%';
+```
+14. COUNT DISTINCT
+```
+SELECT count(DISTINCT firstname) FROM customers WHERE firstname like 'J%';
+```
+15. GROUP BY 
+```
+SELECT firstname FROM customers WHERE firstname like 'J%' group by firstname;
+```
+16. NESTED QUERIES
+```
+SELECT * FROM customers WHERE customerid in (SELECT customerid from customers);
+```
+17. COMMON TABLE EXPRESSIONS (cte's)
+```
+with cte as 
+(
+SELECT firstname, lastname, CONCAT(firstname,' ',lastname)
+FROM customers
+)
+SELECT * 
+FROM customers; 
+```
+18. INNER JOIN
 ```
 ```
-13. DISTINCT 
+19. LEFT JOIN 
 ```
 ```
-14. COUNT 
-```
-```
-15. COUNT DISTINCT
-```
-```
-16. GROUP BY 
-```
-```
-17. NEST QUERIES
-```
-```
-18. COMMON TABLE EXPRESSIONS (cte's)
-```
-```
-19. INNER JOIN
-```
-```
-20. LEFT JOIN 
-```
-```
-21. RIGHT JOIN
-```
-```
-22. OUTER JOIN 
-```
-```
-23. CHANGE DATA FORMAT and  INSERT into new table
-
 
 ## Creators
 
