@@ -82,7 +82,7 @@ SELECT Firstname as f_name FROM customers;
 ```
 5. Concat two columns of the same data type and alais 
 ```
-SELECT firstname + Lastname AS full_name FROM customer;
+SELECT CONCAT(firstname,lastname) AS full_name FROM customer;
 ```
 6. Use a WHERE clause to filter data 
 ```
