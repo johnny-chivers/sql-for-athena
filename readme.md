@@ -11,11 +11,15 @@
 - [Creators](#creators)
 
 ## What's included
-
+Three CSVs containing all data for the tutorial. 
+All code and queries which are ran during the tutorial. 
+link to [youtube video](https://youtu.be/V21xjnHMOyk) video. 
  
 
 ## Overview 
-1. 
+1. We create an S3 bucket and upload data for the tutorial
+2. We look at some of the theory behind AWS Athena and Presto 
+3. We run a series of queries against the data we uploaded to S3
 
 ## Data
 Below are the schemas for the tables created in the Glue Data Catalog by the cloudformation template. They also include a small sampke of data to aid the explaination of the coding syntax.
@@ -205,7 +209,7 @@ SELECT * FROM order LEFT JOIN customers on customers.customerid = orders.custome
 
 ## Useful Links
 
-- [youtube video]()) 
+- [youtube video](https://youtu.be/V21xjnHMOyk) 
 - [website](https://www.johnnychivers.co.uk)
 - [buy me a coffee](https://www.buymeacoffee.com/johnnychivers)
 
